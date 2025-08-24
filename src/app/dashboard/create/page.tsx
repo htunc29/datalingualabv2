@@ -514,8 +514,8 @@ export default function CreateSurvey() {
                       {question.conditionalLogic?.dependsOn && question.conditionalLogic?.showWhen && (
                         <div className="mt-4 p-3 bg-yellow-100 rounded-lg">
                           <p className="text-sm text-yellow-800">
-                            Bu soru sadece "{sections.flatMap(s => s.questions).find(q => q.id === question.conditionalLogic?.dependsOn)?.question}" 
-                            sorusuna "{question.conditionalLogic.showWhen}" cevabı verildiğinde gösterilecek.
+                            Bu soru sadece &quot;{sections.flatMap(s => s.questions).find(q => q.id === question.conditionalLogic?.dependsOn)?.question}&quot; 
+                            sorusuna &quot;{question.conditionalLogic.showWhen}&quot; cevabı verildiğinde gösterilecek.
                           </p>
                         </div>
                       )}
@@ -533,7 +533,7 @@ export default function CreateSurvey() {
                               onChange={(e) => updateQuestion(sectionIndex, questionIndex, {
                                 likertSettings: {
                                   ...question.likertSettings,
-                                  scaleType: e.target.value as any
+                                  scaleType: e.target.value as 'agreement' | 'satisfaction' | 'frequency' | 'importance' | 'quality' | 'likelihood' | 'custom'
                                 }
                               })}
                               className="w-full px-3 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-colors duration-200"
@@ -556,7 +556,7 @@ export default function CreateSurvey() {
                               onChange={(e) => updateQuestion(sectionIndex, questionIndex, {
                                 likertSettings: {
                                   ...question.likertSettings,
-                                  scaleSize: parseInt(e.target.value) as any
+                                  scaleSize: parseInt(e.target.value) as 3 | 4 | 5 | 7 | 10
                                 }
                               })}
                               className="w-full px-3 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-colors duration-200"

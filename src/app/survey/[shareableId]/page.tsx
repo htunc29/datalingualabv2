@@ -448,7 +448,7 @@ export default function SurveyFillPage({ params }: SurveyFillPageProps) {
               </svg>
             </div>
             <h1 className="text-2xl font-bold text-gray-800 mb-2">Survey Not Found</h1>
-            <p className="text-gray-600">The survey you're looking for doesn't exist or has been removed.</p>
+            <p className="text-gray-600">The survey you&apos;re looking for doesn&apos;t exist or has been removed.</p>
           </div>
         </div>
       </div>

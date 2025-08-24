@@ -199,7 +199,7 @@ export default function Home() {
                 DataLinguaLab - TÜBİTAK Destekli Araştırma Projesi
               </h4>
               <p className="text-gray-600 mb-4 max-w-3xl mx-auto">
-                Bu platform, Türkiye'de dil ve biliş araştırmalarını desteklemek amacıyla 
+                Bu platform, Türkiye&apos;de dil ve biliş araştırmalarını desteklemek amacıyla 
                 geliştirilmiş özgün bir veri toplama aracıdır. Ses verilerinin çevrimiçi 
                 toplanmasındaki eksikliği gidererek araştırmacılara kapsamlı bir çözüm sunar.
               </p>

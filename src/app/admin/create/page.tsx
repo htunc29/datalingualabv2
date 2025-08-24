@@ -354,7 +354,7 @@ export default function CreateSurvey() {
                     {/* Conditional Logic Settings */}
                     <div className="bg-yellow-50 rounded-xl p-6 border border-yellow-200">
                       <h4 className="font-semibold text-yellow-900 mb-4">🔗 Conditional Logic</h4>
-                      <p className="text-sm text-yellow-700 mb-4">Make this question appear based on another question's answer</p>
+                      <p className="text-sm text-yellow-700 mb-4">Make this question appear based on another question&apos;s answer</p>
                       
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div>
@@ -383,7 +383,7 @@ export default function CreateSurvey() {
                                 // Only show questions that come before this one and are multiple-choice with options
                                 return idx < questionIndex && q.type === 'multiple-choice' && q.options && q.options.length > 0;
                               })
-                              .map((q, idx) => (
+                              .map((q) => (
                                 <option key={q.id} value={q.id}>
                                   {q.question || `Question ${questions.findIndex(sq => sq.id === q.id) + 1}`}
                                 </option>
@@ -418,8 +418,8 @@ export default function CreateSurvey() {
                       {question.conditionalLogic?.dependsOn && question.conditionalLogic?.showWhen && (
                         <div className="mt-4 p-3 bg-yellow-100 rounded-lg">
                           <p className="text-sm text-yellow-800">
-                            This question will only show when "{questions.find(q => q.id === question.conditionalLogic?.dependsOn)?.question}" 
-                            is answered with "{question.conditionalLogic.showWhen}".
+                            This question will only show when &quot;{questions.find(q => q.id === question.conditionalLogic?.dependsOn)?.question}&quot; 
+                            is answered with &quot;{question.conditionalLogic.showWhen}&quot;.
                           </p>
                         </div>
                       )}
@@ -437,7 +437,7 @@ export default function CreateSurvey() {
                               onChange={(e) => updateQuestion(index, {
                                 likertSettings: {
                                   ...question.likertSettings,
-                                  scaleType: e.target.value as any
+                                  scaleType: e.target.value as 'agreement' | 'satisfaction' | 'frequency' | 'importance' | 'quality' | 'likelihood' | 'custom'
                                 }
                               })}
                               className="w-full px-3 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-colors duration-200"
@@ -460,7 +460,7 @@ export default function CreateSurvey() {
                               onChange={(e) => updateQuestion(index, {
                                 likertSettings: {
                                   ...question.likertSettings,
-                                  scaleSize: parseInt(e.target.value) as any
+                                  scaleSize: parseInt(e.target.value) as 3 | 4 | 5 | 7 | 10
                                 }
                               })}
                               className="w-full px-3 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-colors duration-200"

@@ -135,7 +135,7 @@ export default function VerifyEmailPage() {
                   </div>
                   <h2 className="text-2xl font-bold text-gray-900 mb-4">Verify Your Email</h2>
                   <p className="text-gray-600 mb-6">
-                    We've sent a 6-digit verification code to<br />
+                    We&apos;ve sent a 6-digit verification code to<br />
                     <span className="font-semibold text-gray-900">{email}</span>
                   </p>
                 </div>
@@ -177,7 +177,7 @@ export default function VerifyEmailPage() {
 
                 <div className="mt-6 text-center">
                   <p className="text-sm text-gray-600">
-                    Didn't receive the code?{' '}
+                    Didn&apos;t receive the code?{' '}
                     <button
                       onClick={handleResendCode}
                       className="text-blue-600 hover:text-blue-700 font-medium"

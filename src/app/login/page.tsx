@@ -270,7 +270,7 @@ export default function UserLogin() {
             {/* Additional Links */}
             <div className="text-center space-y-3">
               <div className="text-sm text-gray-600">
-                Hesabınız yok mu? / Don't have an account?
+                Hesabınız yok mu? / Don&apos;t have an account?
               </div>
               <Link
                 href="/register"

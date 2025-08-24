@@ -167,7 +167,7 @@ export default function AllSurveysPage() {
                   anket bulundu / surveys found
                   {searchTerm && (
                     <span className="ml-2 text-purple-600">
-                      "{searchTerm}" için
+                      &quot;{searchTerm}&quot; için
                     </span>
                   )}
                 </span>
